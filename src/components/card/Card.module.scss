@@ -1,0 +1,15 @@
+.test {
+  background: white;
+
+  width: min(80%, 60rem);
+  padding: 1rem 0;
+
+  display: flex;
+  justify-content: center;
+
+  @media only screen and (min-width: 900px) {
+    border-radius: 32px;
+    box-shadow: 0 6px 13px rgba($color: #000000, $alpha: 0.25);
+    padding: 32px;
+  }
+}
