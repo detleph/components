@@ -1,0 +1,11 @@
+@mixin highten {
+  border-radius: 32px;
+  box-shadow: 0 6px 13px rgba($color: #000000, $alpha: 0.25);
+}
+
+@mixin expand-bg($selector: ".background") {
+  &:hover #{$selector},
+  &:focus-visible #{$selector} {
+    transform: scale(1.1);
+  }
+}

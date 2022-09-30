@@ -1,0 +1,75 @@
+@import "../../styles/highlight.scss";
+@import "../../styles/position.scss";
+@import "../../styles/colors.scss";
+
+.tile {
+  display: block;
+  position: relative;
+
+  height: 8rem;
+  width: 8rem;
+  aspect-ratio: 1;
+  font-size: 1.5rem;
+
+  display: grid;
+  grid: 1fr 2.5rem / 1fr;
+
+  @include expand-bg();
+
+  text-decoration: none;
+
+  * {
+    color: black;
+  }
+
+  &:hover svg,
+  &:focus-visible svg {
+    fill: $accent;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .tile {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+.background {
+  transition: transform 100ms;
+
+  position: absolute;
+  @include fullInset();
+
+  @include highten;
+  border-radius: 32px;
+}
+
+.textContainer {
+  position: relative;
+  display: flex;
+
+  justify-content: center;
+}
+
+.iconContainer {
+  height: 70%;
+  width: 70%;
+  min-width: 0;
+  min-height: 0;
+  aspect-ratio: 1;
+
+  align-self: center;
+  justify-self: center;
+
+  * {
+    height: 100%;
+    width: 100%;
+  }
+
+  svg {
+    transition: fill 100ms;
+
+    fill: $unimportant;
+  }
+}
