@@ -19,7 +19,8 @@
 
   position: relative;
 
-  &:hover .background {
+  &:hover .background,
+  &:focus-visible .background {
     transform: scale(1.1);
   }
 }
