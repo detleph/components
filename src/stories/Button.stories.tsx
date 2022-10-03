@@ -12,4 +12,5 @@ export const defaultButton = Template.bind({});
 
 defaultButton.args = {
   children: "Test",
+  loading: false,
 };
