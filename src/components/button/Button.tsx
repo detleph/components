@@ -3,16 +3,17 @@ import styles from "./Button.module.scss";
 import { ReactComponent } from "../../assets/svgr-custom";
 // @ts-ignore
 import { ReactComponent as LoadingCircles } from "../../assets/loading-circles.svg";
+import { combineConditionalClasses } from "../../helpers/combineClasses";
 
 interface ButtonProps {
   loading?: boolean;
-  icon?: typeof ReactComponent;
+  icon?: boolean;
   children: any;
 }
 
 const Button: React.FC<ButtonProps> = ({ children, loading, icon }) => {
   return (
-    <button className={styles.button}>
+    <button className={combineConditionalClasses({ [styles.button]: true, [styles.icon]: !!icon })}>
       <div className={styles.background}></div>
       <div style={{ opacity: loading ? 0 : 1 }} className={styles.children}>
         {children}

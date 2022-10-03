@@ -25,6 +25,22 @@
   }
 }
 
+.icon {
+  width: 3.2rem;
+  height: 3.2rem;
+
+  padding: 0;
+
+  .children {
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+
+  .background {
+    border-radius: 100%;
+  }
+}
+
 .background {
   border-radius: 1rem;
   background: $accent;
