@@ -20,4 +20,4 @@ jobs:
     - name: Install deploy-storybook
       run: npm i -g @storybook/storybook-deployer
     - name: Build and deploy
-      run: storybook-to-gh-pages -- --ci --branch=gh-pages
+      run: npx -p @storybook/storybook-deployer storybook-to-ghpages -- --ci --branch=gh-pages
