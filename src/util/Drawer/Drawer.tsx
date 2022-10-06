@@ -23,9 +23,9 @@ const UIDrawer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <motion.div
       className={styles.drawer}
-      initial={{ y: "100vh" }}
+      initial={{ y: "100%" }}
       animate={{ y: "0%" }}
-      exit={{ y: "100vh" }}
+      exit={{ y: "100%" }}
       transition={{ type: "tween" }}
     >
       {children}
