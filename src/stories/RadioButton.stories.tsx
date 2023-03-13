@@ -4,7 +4,11 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import RadioButton from "../components/radio/button/RadioButton";
 
-export default { title: "Radio button", component: RadioButton } as ComponentMeta<typeof RadioButton>;
+export default {
+  title: "Radio button",
+  component: RadioButton,
+  argTypes: { onClick: { action: "click" } },
+} as ComponentMeta<typeof RadioButton>;
 
 const Template: ComponentStory<typeof RadioButton> = (args) => <RadioButton {...args} />;
 
@@ -14,5 +18,5 @@ DefaultInput.args = {
   value: "test",
   label: "test",
   checked: false,
-  disabled: false
+  disabled: false,
 };
