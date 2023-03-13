@@ -1,0 +1,58 @@
+@import "../../../styles/colors.scss";
+
+.containerLabel {
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+}
+
+.radioButton {
+    position: relative;
+    appearance: none;
+    width: 1.2em;
+    height: 1.2em;
+    transform: translateY(-0.075em);
+    border: 0.15em solid $unimportant;
+    border-radius: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: border 100ms linear;
+}
+
+.radioButton:disabled {
+    border-color: $unimportant;
+}
+
+.radioButton:checked {
+    border-color: $accent;
+}
+
+.radioButton:disabled {
+    border-color: $disabled;
+}
+
+.radioButton::before {
+    content: "";
+    width: 0.6em;
+    height: 0.6em;
+
+    border-radius: 100%;
+    transform: scale(0);
+    transition: transform 100ms ease-in-out;
+    background: $accent;
+}
+
+.radioButton:disabled::before {
+    background: $disabled;
+}
+
+.radioButton:checked::before {
+    transform: scale(1);
+}
+
+.radioButton:focus-within {
+    border: 0.2em solid $accent;
+}

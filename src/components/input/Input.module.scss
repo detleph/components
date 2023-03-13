@@ -50,6 +50,10 @@
   position: absolute;
   left: 16px;
   transition: transform 100ms, left 100ms;
+  pointer-events: none;
+
+
+  width: 20%;
 }
 
 .input {
@@ -64,5 +68,8 @@
   &:not(:placeholder-shown) ~ .label {
     left: 100%;
     transform: translateX(calc(-100% - 0.5em)) scale(0.8);
+
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
 }
