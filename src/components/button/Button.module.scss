@@ -69,6 +69,10 @@
   svg {
     overflow: visible;
 
+    circle {
+      fill: white;
+    }
+
     @for $i from 1 through 3 {
       :nth-child(#{$i}) {
         animation-delay: calc(7 * #{$i}0ms);
