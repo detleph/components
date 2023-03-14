@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import styles from "./Button.module.scss";
-import { ReactComponent } from "../../assets/svgr-custom";
 // @ts-ignore
 import { ReactComponent as LoadingCircles } from "../../assets/loading-circles.svg";
 import { combineConditionalClasses } from "../../helpers/combineClasses";

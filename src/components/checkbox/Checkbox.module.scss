@@ -1,0 +1,46 @@
+@import "../../styles/colors.scss";
+
+.containerLabel {
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+}
+
+.checkbox {
+    appearance: none;
+    margin: 0;
+    width: 1.2em;
+    height: 1.2em;
+
+    border: 0.15em solid $unimportant;
+    border-radius: 0.25em;
+
+    display: grid;
+    place-content: center;
+
+    transition: border 100ms linear;
+}
+
+.checkbox::before {
+    content: "";
+    width: 1em;
+    height: 1em;
+    background: url("/close.svg");
+    background-size: contain;
+    background-position: center;
+
+    transform: scale(0);
+    transition: transform 100ms ease-in-out, filter 100ms linear;
+}
+
+.checkbox:checked::before {
+    transform: scale(1);
+}
+
+.checkbox:disabled {
+    border-color: $disabled;
+}
+
+.checkbox:disabled:before {
+    filter: grayscale(1);
+}
